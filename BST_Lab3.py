@@ -102,7 +102,9 @@ def drawTrees(Tree, x,y, xMove,yMove):# This is a modified drawTrees method from
             
         if Tree.right is not None:# here we traverse through our Tree and we insert the values that go to the right while drawing the right side of the tree
             q1=np.array([[x , y+yMove], [x + xMove, y]])
+        
             draw_Triangle(ax,1,q1,.9)
+                
             drawTrees(Tree.right,  x+xMove, y-yMove,xMove/2,yMove)
     
         
