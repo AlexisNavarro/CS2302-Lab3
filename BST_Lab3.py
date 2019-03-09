@@ -72,6 +72,7 @@ def Find(T,k):
 #------------------------------------------------------------------------------
 #Method to draw my Binary Search Tree
 #Requires the Use of draw Triangle to function properly
+
     
 def draw_Triangle(ax,n,p,w):# this method makes a triangle shape that is used by the tree method; also this method is modified by the squares method from lab 1
     if n>0:
@@ -88,8 +89,8 @@ ax.axis('on')
 plt.show()
 fig.savefig('Triangle.png')
 
-
-def drawTrees(Tree, x,y, xMove,yMove):# This is a modified drawTrees method from lab 1
+#The method to create trees was modified from lab 1 , beacause I was having issues creating the circles in my trees and transfering the values from a sorted tree to the drawing.
+def drawTrees(Tree, x,y, xMove,yMove):
     if Tree is not None:
         plt.text(x-.4,y+yMove,Tree.item, bbox={"boxstyle":"circle","facecolor":"white"}) # this lets me create the circles, place them in a correct position on my BST, and allows me to input the values of my tree in its designated parts.
         
